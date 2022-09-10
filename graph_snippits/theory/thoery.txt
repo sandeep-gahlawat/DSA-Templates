@@ -1,0 +1,31 @@
+Suppose you apply both Dijkstra’s and Bellman-Ford algorithm on a graph G = (V, E) with positive edge weights. Can both the algorithms produce different shortest-path trees?=>yes it true
+
+In any best implementation of Union-Find data structure, the worst case complexity for the Make-Set operation is O(1).=>yes it is true
+
+How many times the for loop in the Bellmann Ford algorithm get executed? = V
+
+Suppose in a Union-Find data structure with path compression,  we apply  a Find(x) operation. Then  the height of the tree containing the node x  always decreases.=>no it is not always true
+
+Which design paradigm is used in the Floyd-Warshall algorithm?=>dp is used
+
+
+Which of the following algorithm can be used to detect if a graph has a negative weight cycle? =>  Bellmann Ford
+
+The maximum number of times the Dijkstra's algorithm can apply the decrease key operation is? =>E
+
+Which algorithm can be used to find all the connected components of a graph?=>Kosaraju's algorithm
+
+How much time is required to test if a directed graph contains a cycle?=>O(E+V)
+
+What is the maximum number of edges in an undirected graph with V vertices?=>V(V-1)/2
+
+What is the minimum number of edges in an undirected graph with V vertices?=>(V-1)
+
+
+
+Let G be a weighted connected undirected graph with distinct positive edge weights. If every edge weight is increased by the same value, then which of the following statements is/are TRUE?
+
+P: Minimum spanning tree of G does not change
+Q: Shortest path between any pair of vertices does not change=>ans is only P
+because there may be different edges in shortest path
+
