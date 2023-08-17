@@ -1,5 +1,6 @@
 
 // C++ program to calculate Diameter of a Binary Tree
+//The diameter of a tree is the number of nodes on the longest path between two leaves in the tree.
 // Time Complexity: O(N2), where N is the number of nodes in the binary tree.
 #include <bits/stdc++.h>
 using namespace std;
@@ -91,3 +92,34 @@ int main()
     return 0;
 }
 
+
+
+//diameter in O(n) time because only we have to calculate  left_height + right_height using global variable
+
+
+int height(node* root, int& ans)
+{
+    if (root == NULL)
+        return 0;
+ 
+    int left_height = height(root->left, ans);
+ 
+    int right_height = height(root->right, ans);
+ 
+    // update the answer, because diameter of a
+    // tree is nothing but maximum value of
+    // (left_height + right_height ) for each node
+    ans = max(ans,left_height + right_height);
+ 
+    return 1 + max(left_height, right_height);
+}
+ 
+/* Computes the diameter of binary tree with given root. */
+int diameter(node* root)
+{
+    if (root == NULL)
+        return 0;
+    int ans = INT_MIN; // This will store the final answer
+    height(root, ans);
+    return ans;
+}

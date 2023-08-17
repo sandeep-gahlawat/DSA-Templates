@@ -14,6 +14,9 @@ using namespace std;
 // parent --> Stores the parent vertex in DFS tree
 // isAP[] --> Stores articulation points
 
+
+//edges in a cycle can't be bridge edge . so find those edges which are not a part of any cycle
+
 // Time Complexity: The above function is simple DFS with additional arrays. So time complexity is same as DFS which is O(V+E) for adjacency list representation of graph.
 void APUtil(vector<int> adj[], int u, vector<bool> &visited,
             vector<int> &disc, vector<int> &low, int &time, int parent)

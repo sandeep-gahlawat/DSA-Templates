@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 1-> count total palingromic substrings in a string
+// 1-> count total palingromic substrings in a string in O(n^2)
 
 
 int countSubstrings(string s)

@@ -1,16 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
-#include <ext/pb_ds/assoc_container.hpp> // Common file
-#include <ext/pb_ds/tree_policy.hpp>
-#include <functional> // for less
-#include <iostream>
-using namespace __gnu_pbds;
 
-// a new data structure defined. Please refer below
-// GNU link : https://goo.gl/WVDL6g
-typedef tree<long long, null_type, less<long long>, rb_tree_tag,
-             tree_order_statistics_node_update>
-    ordered_set;
+bool check(int n,int x)
+{
+    n-=2*x;
+    if(n/2>x)
+    return true;
+    return false;
+    
+}
+int unequal(int n)
+{
+    if(n%2!=0)return 0;
+    long long low = 0,high = n;
+    int ans = 0;
+    while(low<=high)
+    {
+        long long mid = (low+high)/2;
+        if(check(n,mid))
+        {
+            ans = mid;
+            low = mid+1;
+        }
+        else
+        high  = mid-1;
 
-
-
+    }
+    return ans;
+}
+int main()
+{
+    cout<<unequal(6)<<endl;
+}

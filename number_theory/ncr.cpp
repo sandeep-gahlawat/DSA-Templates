@@ -9,9 +9,9 @@ using namespace std;
 //1
 //1 1
 //1 2 1
-//1 3 2 1
-//1 4 5 3 1
-//1 4 9 8 4 1
+//1 3 3 1
+//1 4 6 3 1
+//1 5 10 9 4 1
 int nCrModp(int n, int r, int p)
 {
     // Optimization for the cases when r is large beacuse ncr = nc(n-r)
